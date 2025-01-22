@@ -23,7 +23,7 @@ public class FolioEntity {
 
     @Column(nullable = false, length = 200)
     private String  cveProducto;
-    @Column(nullable = false,)
+    @Column(nullable = false)
     private Date fecha;
 
     public String getFolio() {
