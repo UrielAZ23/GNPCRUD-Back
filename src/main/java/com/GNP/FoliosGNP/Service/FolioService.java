@@ -25,15 +25,19 @@ public class FolioService {
 
     }
 
-    public FolioEntity save(FolioEntity user) {
-        return this.folioEntityInt.save(user);
+    public FolioEntity save(FolioEntity folio) {
+        if(exist(folio.folio)){
+            return this.folioEntityInt.save(folio);
+        }
+        return this.folioEntityInt.save(folio);
     }
 
-    public void delete(String username){
-        this.folioEntityInt.deleteById(username);
+
+    public void delete(String folio){
+        this.folioEntityInt.deleteById(folio);
     }
 
-    public Boolean exist(String username) {
-        return this.folioEntityInt.existsById(username);
+    public Boolean exist(String folio) {
+        return this.folioEntityInt.existsById(folio);
     }
 }
